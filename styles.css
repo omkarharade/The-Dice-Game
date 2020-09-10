@@ -39,6 +39,10 @@
   font-size: 4rem;
   border-radius: 20px;
   background-color: #4ECCA3;
+  
+  .playButton:hover{
+  background-color: #ccff33;
+}
 
   font-family: 'Indie Flower', cursive;
 }
