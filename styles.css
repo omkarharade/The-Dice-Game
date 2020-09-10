@@ -22,7 +22,30 @@
 .dice {
   text-align: center;
   display: inline-block;
+  height: 300px;
 
+
+}
+
+.play{
+
+  text-align: center;
+}
+
+.play-button{
+
+  width: 20%;
+  height: 100px;
+  font-size: 4rem;
+  border-radius: 20px;
+  background-color: #4ECCA3;
+
+  font-family: 'Indie Flower', cursive;
+}
+
+.pressed{
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
 }
 
 
@@ -33,10 +56,10 @@ body {
 
 
 h1 {
-  margin: 30px;
+  margin: 20px;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 8rem;
+  font-size: 5rem;
   color: #4ECCA3;
 }
 
@@ -47,7 +70,7 @@ p {
 }
 
 img {
-  width: 80%;
+  width: 60%;
 }
 
 footer {
