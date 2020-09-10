@@ -1,3 +1,2 @@
 
-
 var playButton=document.querySelector("button");function rollIt(){var t=Math.floor(6*Math.random()+1),e="images/dice"+t+".png",n=document.getElementsByClassName("img1")[0],o=Math.floor(6*Math.random()+1),a="images/dice"+o+".png",r=document.getElementsByClassName("img2")[0];n.setAttribute("src",e),r.setAttribute("src",a);var s=document.querySelector("h1");s.innerText=t==o?"It's a Draw":t>o?"🚩Player 1 Wins !!":"Player 2 Wins !!🚩"}function buttonAnimation(t){t.classList.add("pressed"),setTimeout(function(){t.classList.remove("pressed")},100)}document.querySelector("button").addEventListener("click",function(){rollIt(),buttonAnimation(playButton)});
