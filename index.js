@@ -4,9 +4,14 @@ document.querySelector("button").addEventListener("click",function(){
 
   rollIt();
   buttonAnimation(playButton);
+
 });
 
-// function to start the game
+document.querySelector(".play-button").addEventListener("click" , function(){
+  var tom1 = new Audio("sounds/dice.mp3");
+  tom1.play();
+});
+
 function rollIt(){
 
   var randomNumber1 = Math.floor(Math.random()*6 + 1);
@@ -26,17 +31,20 @@ function rollIt(){
   judgement.innerText = "It's a Draw";
 
   else if(randomNumber1 > randomNumber2)
-  judgement.innerText = "🚩Player 1 Wins !!";
+  judgement.innerText = "🚩  Player 1 Wins !!";
 
   else
-  judgement.innerText = "Player 2 Wins !!🚩";
+  judgement.innerText = "Player 2 Wins !!  🚩";
 }
-// function for animation
+
+
+
+
 function buttonAnimation(activeButton){
+
 
 activeButton.classList.add("pressed");
 setTimeout(function(){
   activeButton.classList.remove("pressed");
 } , 100);
 }
-
