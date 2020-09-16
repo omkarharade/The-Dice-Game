@@ -23,12 +23,21 @@
 
   text-align: center;
   display: inline-block;
-  height: 12.5rem;
+  height: 15.5rem;
+}
 
+@keyframes roll {
+
+  0%   {transform: rotate(0deg)}
+ 25%  {transform: rotate(90deg)}
+ 50%  {transform: rotate(-90deg)}
+ 75%  {transform: rotate(90deg)}
+ 100% {transform: rotate(0deg)}
 }
 
 .play{
-
+  margin : 0 auto;
+  width: 70%;
   text-align: center;
 }
 
@@ -36,7 +45,7 @@
 
   width: 20%;
   height: 100px;
-  font-size: 4rem;
+  font-size: 3.5rem;
   border-radius: 20px;
 
   border-width: thick;
@@ -45,53 +54,20 @@
   border-color: #4ECCA3 ;
 
 
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Lobster', cursive;
 }
 .play-button:hover{
 
     border-color: #69F033;
     color: #69F033;
-    background-color: #0E444D;
+    background-color: #005D64;
 }
-
 
 .pressed{
     box-shadow: 0 3px 4px 0 #DBEDF3;
     opacity: 0.5;
 }
 
-
-
-body {
-  background-color: #393E46;
-}
-
-
-h1 {
-  margin: 20px;
-  font-family: 'Lobster', cursive;
-  text-shadow: 5px 0 #232931;
-  font-size: 5rem;
-  color: #4ECCA3;
-}
-
-p {
-  font-size: 2rem;
-  color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
-}
-
-img {
-  width: 60%;
-}
-
-footer {
-  margin-top: 5%;
-  color: #EEEEEE;
-  text-align: center;
-  font-family: 'Indie Flower', cursive;
-
-}
 
 
 body {

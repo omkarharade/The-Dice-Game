@@ -1,16 +1,30 @@
 
+
 var playButton = document.querySelector("button");
 document.querySelector("button").addEventListener("click",function(){
-
+  diceAnimate();
   rollIt();
   buttonAnimation(playButton);
 
 });
 
 document.querySelector(".play-button").addEventListener("click" , function(){
-  var tom1 = new Audio("sounds/dice.mp3");
-  tom1.play();
+  var diceRoll = new Audio("sounds/dice.mp3");
+  diceRoll.play();
 });
+
+
+
+var dice1 = document.querySelectorAll(".dice")[0];
+var dice2 = document.querySelectorAll(".dice")[1];
+
+dice1.addEventListener("animationend", endAnimation);
+dice2.addEventListener("animationend", endAnimation);
+
+function endAnimation(){
+  dice1.style.animation = "none";
+  dice2.style.animation = "none";
+}
 
 function rollIt(){
 
@@ -25,16 +39,19 @@ function rollIt(){
   dice1.setAttribute("src",randomDiceImage1);
   dice2.setAttribute("src",randomDiceImage2);
 
-
   var judgement = document.querySelector("h1");
-  if(randomNumber1 == randomNumber2)
+  if(randomNumber1 == randomNumber2){
+
   judgement.innerText = "It's a Draw";
+  }
 
-  else if(randomNumber1 > randomNumber2)
-  judgement.innerText = "🚩  Player 1 Wins !!";
+  else if(randomNumber1 > randomNumber2){
+  judgement.innerText = "🚩 Player 1 Wins !!";
+  }
+  else{
+    judgement.innerText = "Player 2 Wins !!  🚩";
+  }
 
-  else
-  judgement.innerText = "Player 2 Wins !!  🚩";
 }
 
 
@@ -46,5 +63,9 @@ function buttonAnimation(activeButton){
 activeButton.classList.add("pressed");
 setTimeout(function(){
   activeButton.classList.remove("pressed");
-} , 100);
+} , 200);
+}
+function diceAnimate(){
+dice1.style.animation = "roll 0.4s ";
+dice2.style.animation = "roll 0.4s ";
 }
