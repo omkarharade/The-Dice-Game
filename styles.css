@@ -10,6 +10,17 @@
   text-align: center;
   display: inline-block;
 }
+
+.pikachu-img:hover{
+  border: 0.1rem solid  yellow;
+  border-radius: 1rem;
+}
+.sonic-img:hover{
+  border:  0.1rem solid #3079D6;
+  border-radius: 1rem;
+}
+
+
 .sonic{
   width: 18rem;
   text-align: center;
