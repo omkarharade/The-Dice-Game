@@ -1,5 +1,19 @@
 
 
+document.querySelector(".pikachu-img").addEventListener("click", function(){
+
+    var pikachu = new Audio("sounds/pikachu.mp3");
+    pikachu.play();
+});
+
+document.querySelector(".sonic-img").addEventListener("click", function(){
+
+    var sonic = new Audio("sounds/sonic.mp3");
+    sonic.play();
+});
+
+
+
 var playButton = document.querySelector("button");
 document.querySelector("button").addEventListener("click",function(){
   diceAnimate();
